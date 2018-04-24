@@ -55,6 +55,7 @@ int main () {
     for(int i=0; i<nT;i++){
         for(int k=1; k<(nX-1);k++){
             Uf[k] = U[k] - c*(dt/dx)*(U[k]-U[k-1]);
+            //Solo imprime con esta condicion de i (1 inicial + 5 snapshots)
             if(i%100 == 0){
 	    cout << X[k] <<  " " << Uf[k] << endl;
             }

@@ -1,5 +1,5 @@
 graph.png : advection.txt
-	python Ar_graph.py
+	python AR_graph.py
 
 advection.txt : ./a.out
 	./a.out > advection.txt
