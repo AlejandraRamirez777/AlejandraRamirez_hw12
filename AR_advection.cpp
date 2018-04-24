@@ -47,7 +47,7 @@ int main () {
 	    Uf[i] = 0.0;
     	}
      //Condicion inicial
-      cout << X[i] <<  " "<< U[i] << endl;
+      //cout << X[i] <<  " "<< U[i] << endl;
     }
 
 
@@ -55,7 +55,9 @@ int main () {
     for(int i=0; i<nT;i++){
         for(int k=1; k<(nX-1);k++){
             Uf[k] = U[k] - c*(dt/dx)*(U[k]-U[k-1]);
+            if(i%100 == 0){
 	    cout << X[k] <<  " " << Uf[k] << endl;
+            }
         }
         copy(Uf.begin(), Uf.end(), U.begin());
     }
